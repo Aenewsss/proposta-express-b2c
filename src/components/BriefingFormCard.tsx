@@ -5,7 +5,7 @@ import BackButton from "./Buttons/BackButton";
 import ContinueButton from "./Buttons/ContinueButton";
 import FirstBriefingForm from "./Forms/FirstBriefingForm";
 import SecondBriefingForm from "./Forms/SecondBriefingForm";
-import ThirdBriefingForm from "./Forms/ThirdBriefingForm";
+import ThirdBriefingForm from "./Forms/SixthBriefingForm";
 import { RoutesEnum } from "@components/enum/routes.enum";
 import { IStore } from "@components/store/types";
 import { useSelector } from "react-redux"
@@ -51,7 +51,7 @@ const BriefingFormCard = ({ stage }: { stage: string }) => {
 
     return (
         <>
-            <div className="flow-card p-4 w-100">
+            <div className="flow-card p-4 w-100 h-100">
                 {getForm()}
             </div>
             {

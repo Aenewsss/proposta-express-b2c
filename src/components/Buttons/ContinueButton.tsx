@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 const ContinueButton = ({ buttonDisabled, pageToGo }: { buttonDisabled: boolean, pageToGo: RoutesEnum }) => {
 
     const router = useRouter()
-    console.log(pageToGo)
 
     const goToPage = () => router.push(pageToGo)
 

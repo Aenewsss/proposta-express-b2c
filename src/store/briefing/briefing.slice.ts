@@ -7,20 +7,31 @@ const briefingSlice = createSlice({
     reducers: {
         changeCustomerName(state, action) {
             state.customerName = action.payload
-
-            const encodedCustomerName = encodeURIComponent(action.payload)
-            state.customerLink = `http://localhost:3000?customerName=${encodedCustomerName}`
         },
         changeBrandColor(state, action) {
             state.brandColor = action.payload
-
-            const encodedCustomerName = encodeURIComponent(state.customerName)
-            const encodedBrandColor = encodeURIComponent(action.payload)
-
-            state.customerLink = `http://localhost:3000?customerName=${encodedCustomerName}&color=${encodedBrandColor}`
+        },
+        changeBranchActivity(state, action) {
+            state.branchActivity = action.payload
+        },
+        changeMarketTime(state, action) {
+            state.marketTime = action.payload
+        },
+        changeDifferentials(state, action) {
+            state.differentials = action.payload
+        },
+        changeSummaryStory(state, action) {
+            state.summaryStory = action.payload
+        },
+        changeSummaryServices(state, action) {
+            state.summaryServices = action.payload
         },
     }
 })
 
-export const { changeBrandColor, changeCustomerName, } = briefingSlice.actions;
+export const {
+    changeBrandColor, changeCustomerName,
+    changeBranchActivity, changeMarketTime,
+    changeDifferentials, changeSummaryStory,
+    changeSummaryServices, } = briefingSlice.actions;
 export const briefingReducer = briefingSlice.reducer

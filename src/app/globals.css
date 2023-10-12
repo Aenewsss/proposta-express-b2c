@@ -127,7 +127,7 @@ img {
 
 .flow-card {
   min-width: 260px;
-  height: 258px;
+  height: 300px;
   border-radius: 20px;
   background: #FFF;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.16), -4px -4px 4px 0px rgba(0, 0, 0, 0.04);
@@ -194,4 +194,18 @@ img {
   background-color: var(--main-color);
   right: -20px;
   bottom: 10px;
+}
+
+.radio-styled{
+  width:30px;
+  height: 30px;
+}
+
+.form-check-input:checked{
+  background-color: var(--main-color);
+  border: none;
+}
+
+.form-check-input:focus{
+  box-shadow: 0 0 0 0.25rem rgba(255, 0, 183, 0.4);
 }
