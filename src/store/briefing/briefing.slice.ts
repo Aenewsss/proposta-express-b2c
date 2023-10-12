@@ -135,6 +135,12 @@ const briefingSlice = createSlice({
                     : state.resources!.push(action.payload)
             }
         },
+        changeInvestment(state, action) {
+            state.investment = action.payload
+        },
+        changeDeadline(state, action) {
+            state.deadline = action.payload
+        }
     }
 })
 
@@ -149,5 +155,5 @@ export const {
     changeWhyPublicNeedWebsite, changeExpectedAppearance,
     changeSiteObjective, changeSiteType, changeSiteSections,
     changeSitesReference, changeCurrentSite, changeAnotherSections,
-    changeResources } = briefingSlice.actions;
+    changeResources, changeInvestment, changeDeadline } = briefingSlice.actions;
 export const briefingReducer = briefingSlice.reducer

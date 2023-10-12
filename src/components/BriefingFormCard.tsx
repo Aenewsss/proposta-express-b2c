@@ -12,6 +12,8 @@ import { useSelector } from "react-redux"
 import FinishButton from "./Buttons/FinishButton";
 import { verifyDataToDisableButton } from "@components/utils/verify-data-disable-button.util";
 import FourthBriefingForm from "./Forms/FourthBriefingForm";
+import FifthBriefingForm from "./Forms/FifthBriefingForm";
+import SixthBriefingForm from "./Forms/SixthBriefingForm";
 
 const BriefingFormCard = ({ stage }: { stage: string }) => {
 
@@ -29,8 +31,8 @@ const BriefingFormCard = ({ stage }: { stage: string }) => {
             case 2: return <SecondBriefingForm />
             case 3: return <ThirdBriefingForm />
             case 4: return <FourthBriefingForm />
-            case 5: return <ThirdBriefingForm />
-            case 6: return <ThirdBriefingForm />
+            case 5: return <FifthBriefingForm />
+            case 6: return <SixthBriefingForm />
         }
     }
 

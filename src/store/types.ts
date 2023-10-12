@@ -1,5 +1,6 @@
 import { DifferentialsEnum } from "@components/enum/differentials.enum"
 import { ExpectedAppearanceEnum } from "@components/enum/expected-appearance.enum"
+import { InvestmentEnum } from "@components/enum/investment.enum"
 import { MarketTimeEnum } from "@components/enum/market-time.enum"
 import { PersonalitiesEnum } from "@components/enum/personalities.enum"
 import { ResourcesEnum } from "@components/enum/resources.enum"
@@ -37,4 +38,6 @@ export interface IBriefing {
     siteSections: SiteSectionsEnum[] | string
     anotherSection?: string
     resources?: ResourcesEnum[] | string
+    deadline: string
+    investment: InvestmentEnum | string
 }

@@ -42,5 +42,7 @@ function verifyFourthStageData(briefing: IBriefing, setButtonDisabled: any) {
 }
 
 function verifyFifthStageData(briefing: IBriefing, setButtonDisabled: any) {
-
+    if (briefing.deadline && briefing.investment) {
+        setButtonDisabled(false)
+    } else setButtonDisabled(true)
 }

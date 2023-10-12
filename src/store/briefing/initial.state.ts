@@ -22,4 +22,6 @@ export const BriefingInitialState: IBriefing = {
     siteType: "",
     siteSections: "",
     sitesReference: "",
+    deadline: "",
+    investment: ""
 }
