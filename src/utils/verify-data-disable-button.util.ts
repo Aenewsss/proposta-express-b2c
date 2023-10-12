@@ -14,7 +14,7 @@ export function verifyDataToDisableButton(briefing: IBriefing, stage: string, se
 
 function verifyFistStageData(briefing: IBriefing, setButtonDisabled: any) {
     if (briefing.customerName && briefing.branchActivity &&
-        briefing.marketTime && briefing.differentials &&
+        briefing.marketTime && briefing.differentials.length > 0 &&
         briefing.summaryStory && briefing.summaryServices) {
         setButtonDisabled(false)
     } else setButtonDisabled(true)

@@ -18,7 +18,16 @@ const briefingSlice = createSlice({
             state.marketTime = action.payload
         },
         changeDifferentials(state, action) {
-            state.differentials = action.payload
+            if (!state.differentials || typeof state.differentials === 'string') {
+                // Se state.differentials for uma string, converta-a em um array com o valor existente
+                state.differentials = [action.payload];
+            } else {
+                const differentials = state.differentials;
+
+                differentials.find(el => el == action.payload)
+                    ? state.differentials = differentials.filter(el => el != action.payload)
+                    : state.differentials.push(action.payload)
+            }
         },
         changeSummaryStory(state, action) {
             state.summaryStory = action.payload

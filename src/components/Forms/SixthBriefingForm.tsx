@@ -1,6 +1,12 @@
+import { IStore } from "@components/store/types";
 import Image from "next/image";
+import { useSelector } from "react-redux";
 
 const SixthBriefingForm = () => {
+
+    const { briefing } = useSelector((store: IStore) => store)
+
+    console.log(briefing)
 
     return (
         <div className=" d-flex flex-column justify-content-center align-items-center h-100">

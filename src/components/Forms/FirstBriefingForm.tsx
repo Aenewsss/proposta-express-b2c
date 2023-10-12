@@ -55,19 +55,19 @@ const FirstBriefingForm = () => {
                 <label className="fw-bold">O que diferencia seu negócio de seus concorrentes?</label>
                 <div className="d-flex gap-4">
                     <div className="form-check form-check-inline  d-flex gap-2 align-items-center">
-                        <input onChange={e => dispatch(changeDifferentials(e.target.value))} className="form-check-input border-dark radio-styled" role="button" type="radio" id="inlineCheckbox5" value={DifferentialsEnum.price} name="differential" />
+                        <input onChange={e => dispatch(changeDifferentials(e.target.value))} className="form-check-input border-dark radio-styled" role="button" type="checkbox" id="inlineCheckbox5" value={DifferentialsEnum.price} name="differential" />
                         <label className="form-check-label fs-16 fw-medium" htmlFor="inlineCheckbox5">Preço</label>
                     </div>
                     <div className="form-check form-check-inline  d-flex gap-2 align-items-center">
-                        <input onChange={e => dispatch(changeDifferentials(e.target.value))} className="form-check-input border-dark radio-styled" role="button" type="radio" id="inlineCheckbox6" value={DifferentialsEnum.quality} name="differential" />
+                        <input onChange={e => dispatch(changeDifferentials(e.target.value))} className="form-check-input border-dark radio-styled" role="button" type="checkbox" id="inlineCheckbox6" value={DifferentialsEnum.quality} name="differential" />
                         <label className="form-check-label fs-16 fw-medium" htmlFor="inlineCheckbox6">Qualidade</label>
                     </div>
                     <div className="form-check form-check-inline  d-flex gap-2 align-items-center">
-                        <input onChange={e => dispatch(changeDifferentials(e.target.value))} className="form-check-input border-dark radio-styled" role="button" type="radio" id="inlineCheckbox7" value={DifferentialsEnum.services} name="differential" />
+                        <input onChange={e => dispatch(changeDifferentials(e.target.value))} className="form-check-input border-dark radio-styled" role="button" type="checkbox" id="inlineCheckbox7" value={DifferentialsEnum.services} name="differential" />
                         <label className="form-check-label fs-16 fw-medium" htmlFor="inlineCheckbox7">Serviços</label>
                     </div>
                     <div className="form-check form-check-inline  d-flex gap-2 align-items-center">
-                        <input onChange={e => dispatch(changeDifferentials(e.target.value))} className="form-check-input border-dark radio-styled" role="button" type="radio" id="inlineCheckbox8" value={DifferentialsEnum.other} name="differential" />
+                        <input onChange={e => dispatch(changeDifferentials(e.target.value))} className="form-check-input border-dark radio-styled" role="button" type="checkbox" id="inlineCheckbox8" value={DifferentialsEnum.other} name="differential" />
                         <label className="form-check-label fs-16 fw-medium" htmlFor="inlineCheckbox8">Outro</label>
                     </div>
                 </div>

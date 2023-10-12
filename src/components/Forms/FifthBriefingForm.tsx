@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux"
 
 const FifthBriefingForm = () => {
 
-    const { deadline, investment } = useSelector((store: IStore) => store.briefing)
+    const { deadline } = useSelector((store: IStore) => store.briefing)
 
     const dispatch = useDispatch()
 
@@ -14,12 +14,13 @@ const FifthBriefingForm = () => {
         <form className="p-2">
 
             <div className="mb-4 d-flex flex-column gap-2 w-100">
-                <label htmlFor="exampleFormControlTextarea1" className="form-label fw-bold">Liste pelo menos 3 websites que você considere interessantes, informando o que especificamente lhe agrada neles</label>
-                <textarea onChange={e => dispatch(changeDeadline(e.target.value))} value={deadline} placeholder="Sua resposta:" className="form-control" rows={3}></textarea>
+                <label htmlFor="exampleFormControlTextarea1" className="form-label fw-bold">Qual o prazo para o desenvolvimento do projeto?</label>
+                <textarea onChange={e => dispatch(changeDeadline(e.target.value))} value={deadline} placeholder="Você imagina ou precisa do site pronto em quanto tempo?" className="form-control" rows={3}></textarea>
             </div>
 
             <div className="mb-4 d-flex flex-column gap-2 w-100">
-                <label className="fw-bold">Que tipo de site você precisa?</label>
+                <label className="fw-bold">Quanto você pretende investir no projeto?</label>
+                <p>Saber o orçamento disponível nos ajuda a formatar uma proposta realista para desenvolvermos seu projeto</p>
                 <div className="d-flex column-gap-5 row-gap-2 flex-wrap">
                     <div className="form-check d-flex gap-2 align-items-center">
                         <input onChange={e => dispatch(changeInvestment(e.target.value))} className="form-check-input border-dark check-styled" role="button" type="radio" id="siteType1" value={InvestmentEnum.upTo2} name="site-investment" />

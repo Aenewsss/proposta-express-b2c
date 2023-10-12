@@ -12,11 +12,11 @@ const HelloText = () => {
 
     const searchParams = useSearchParams()
 
-    const { brandColor, customerName } = useSelector((store: IStore) => store.briefing)
+    const { customerName } = useSelector((store: IStore) => store.briefing)
 
     useEffect(() => {
-        dispatch(changeCustomerName(searchParams.get("customerName")))
-        dispatch(changeBrandColor(searchParams.get("color")))
+        dispatch(changeCustomerName((searchParams.get("customerName"))))
+        dispatch(changeBrandColor((searchParams.get("color"))))
     }, []);
 
     return (
