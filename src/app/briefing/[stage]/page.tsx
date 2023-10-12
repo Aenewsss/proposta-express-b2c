@@ -1,7 +1,6 @@
 import BriefingFlowCard from "@components/components/BriefingFlowCard";
 import BriefingFormCard from "@components/components/BriefingFormCard";
 import BriefingExplanation from "@components/components/Explanation";
-import { RoutesEnum } from "@components/enum/routes.enum";
 
 export default function Briefing({ params }: { params: { stage: string } }) {
     if (params.stage != "explanation")
