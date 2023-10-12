@@ -1,0 +1,16 @@
+export enum SiteSectionsEnum {
+    initialPage = "Página Inicial",
+    whoWeAre = "Quem somos",
+    sevices = "Serviços",
+    budget = "Orçamento",
+    contact = "Contato",
+    news = "Notícias",
+    blog = "Blog",
+    products = "Relação de Produtos",
+    gallery = "Galeria de fotos/vídeos",
+    team = "Página Equipe",
+    feedbacks = "Depoimentos de clientes",
+    portfolio = "Portfólio",
+    specialForms = "Formulários Especiais (Ex: Trabalhe conosco)",
+    customerArea = "Área do cliente com funcionalidade específica",
+}

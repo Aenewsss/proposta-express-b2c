@@ -1,44 +1,31 @@
 import { IStore } from "@components/store/types";
-import Image from "next/image";
-import { useSelector } from "react-redux"
-import { useRef } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { changeAboutPublicTarget, changePublicRelationshipWithBrand, changeWhyPublicNeedWebsite } from "@components/store/briefing/briefing.slice";
 
 const ThirdBriefingForm = () => {
 
-    const { customerLink } = useSelector((store: IStore) => store.briefing)
+    const { aboutPublicTarget, publicRelationshipWithBrand, whyPublicNeedWebsite } = useSelector((store: IStore) => store.briefing)
 
-    const textCopiedRef = useRef<HTMLParagraphElement>(null);
-
-    const copyLink = () => {
-        const textCopiedElement = textCopiedRef.current!;
-
-        textCopiedElement.classList.remove("d-none");
-        navigator.clipboard.writeText(customerLink)
-
-        setTimeout(() => {
-            textCopiedElement.classList.add("d-none");
-        }, 3000);
-    }
+    const dispatch = useDispatch()
 
     return (
-        <div className=" d-flex flex-column justify-content-center align-items-center h-100">
-
-            <Image width={100} height={100} src="/icons/Check-rosa-fundo-roxo.svg" alt="Ícone Check Rosa" />
-
-            <h3 className="fs-28 fw-bold mb-0 mt-3">Link criado com sucesso</h3>
-            <h4 className="fs-16 text-black-3e mb-0">Envie esse link para o seu cliente</h4>
-
-            <div className="d-flex justify-content-center mt-3 position-relative">
-                <div className="border border-secondary d-flex rounded">
-                    <input readOnly value={customerLink} type="text" className="border-0 m-2 text-truncate pe-none" />
-                    <button onClick={copyLink} className="btn btn-outline-secondary rounded-0 border-end border-top border-bottom d-flex align-items-center gap-2">
-                        <Image fill src="/icons/copiar.svg" alt="Ícone Copiar" />
-                        <span>Copiar</span>
-                    </button>
-                </div>
-                <p ref={textCopiedRef} className="d-none position-absolute text-copied">Link Copiado!</p>
+        <form className="p-2">
+            <div className="mb-4 d-flex flex-column gap-2 w-100">
+                <label htmlFor="exampleFormControlTextarea1" className="form-label fw-bold">O que você já sabe sobre o público que pretende atingir com website?</label>
+                <textarea
+                    onChange={e => dispatch(changeAboutPublicTarget(e.target.value))} value={aboutPublicTarget}
+                    placeholder="Descreva o máximo que você puder: gênero, idade, nacionalidade, humor, profissão, formação, classe social, hábitos de consumo, estilo de vida, etc."
+                    className="form-control" id="exampleFormControlTextarea1" rows={3}></textarea>
             </div>
-        </div>
+            <div className="mb-4 d-flex flex-column gap-2 w-100">
+                <label htmlFor="exampleFormControlTextarea1" className="form-label fw-bold">Por que esse público precisa do seu site?</label>
+                <textarea onChange={e => dispatch(changeWhyPublicNeedWebsite(e.target.value))} value={whyPublicNeedWebsite} placeholder="Sua resposta:" className="form-control" rows={3}></textarea>
+            </div>
+            <div className="mb-4 d-flex flex-column gap-2 w-100">
+                <label htmlFor="exampleFormControlTextarea1" className="form-label fw-bold">Qual a relações do público com a marca? Como ela consome sua marca?</label>
+                <textarea onChange={e => dispatch(changePublicRelationshipWithBrand(e.target.value))} value={publicRelationshipWithBrand} placeholder="Sua resposta:" className="form-control" rows={3}></textarea>
+            </div>
+        </form>
     );
 }
 
