@@ -14,7 +14,7 @@ const PdfPage1 = ({ briefingData }: { briefingData: IBriefing }) => {
                     <Defs>
                         <LinearGradient id="paint0_linear_9_642" x1="0.624998" y1="273" x2="113.827" y2="214.152">
                             <Stop offset="0%" stopColor={briefingData?.brandColor || "#fff"} />
-                            <Stop offset="100%" stopColor={`#${briefingData?.brandColor || "#aaf"}33`} />
+                            <Stop offset="100%" stopColor={`${briefingData?.brandColor || "#aaf"}33`} />
                         </LinearGradient>
                     </Defs>
                 </Svg>

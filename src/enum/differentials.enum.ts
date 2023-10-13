@@ -1,6 +1,6 @@
 export enum DifferentialsEnum {
     price = "Preço",
-    quality = "qualidade",
+    quality = "Qualidade",
     services = "Serviços",
     other = "Outro",
 }

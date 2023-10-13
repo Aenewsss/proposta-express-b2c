@@ -1,15 +1,8 @@
-import { IBriefing, IStore } from "@components/store/types";
-import { Page, Text, Image, Document, StyleSheet, View } from "@react-pdf/renderer";
-import { useSelector } from "react-redux";
+import { IBriefing } from "@components/store/types";
+import { Page, Text, View } from "@react-pdf/renderer";
 import FooterPdf from "./Footer";
-import { MarketTimeEnum } from "@components/enum/market-time.enum";
-import { DifferentialsEnum } from "@components/enum/differentials.enum";
-import { PersonalitiesEnum } from "@components/enum/personalities.enum";
 import styles from "./styles";
-import { VisualIdentityEnum } from "@components/enum/visual-identity-manual.enum";
-import { SiteObjectiveEnum } from "@components/enum/site-objective.enum";
-import { TypeSiteEnum } from "@components/enum/type-site.enum";
-import { ExpectedAppearanceEnum } from "@components/enum/expected-appearance.enum";
+
 import { InvestmentEnum } from "@components/enum/investment.enum";
 
 const PdfPage7 = ({ briefingData }: { briefingData: IBriefing }) => {
@@ -32,14 +25,14 @@ const PdfPage7 = ({ briefingData }: { briefingData: IBriefing }) => {
 
             <View style={styles.viewQuestionMoreMargin}>
                 <Text style={styles.question}>Que tipo de site você precisa?</Text>
-                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.upTo2 ? "x" : ""} ]&nbsp;&nbsp;{InvestmentEnum.upTo2}</Text>
-                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.upTo5 ? "x" : ""} ]&nbsp;&nbsp;{InvestmentEnum.upTo5}</Text>
-                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.upTo10 ? "x" : ""} ]&nbsp;&nbsp;{InvestmentEnum.upTo10}</Text>
-                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.upTo20 ? "x" : ""} ]&nbsp;&nbsp;{InvestmentEnum.upTo20}</Text>
-                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.upTo50 ? "x" : ""} ]&nbsp;&nbsp;{InvestmentEnum.upTo50}</Text>
-                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.upTo100 ? "x" : ""} ]&nbsp;&nbsp;{InvestmentEnum.upTo100}</Text>
-                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.moreThan100 ? "x" : ""} ]&nbsp;&nbsp;{InvestmentEnum.moreThan100}</Text>
-                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.none ? "x" : ""} ]&nbsp;&nbsp;{InvestmentEnum.none}</Text>
+                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.upTo2 ? "x" : "  "} ]&nbsp;&nbsp;{InvestmentEnum.upTo2}</Text>
+                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.upTo5 ? "x" : "  "} ]&nbsp;&nbsp;{InvestmentEnum.upTo5}</Text>
+                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.upTo10 ? "x" : "  "} ]&nbsp;&nbsp;{InvestmentEnum.upTo10}</Text>
+                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.upTo20 ? "x" : "  "} ]&nbsp;&nbsp;{InvestmentEnum.upTo20}</Text>
+                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.upTo50 ? "x" : "  "} ]&nbsp;&nbsp;{InvestmentEnum.upTo50}</Text>
+                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.upTo100 ? "x" : "  "} ]&nbsp;&nbsp;{InvestmentEnum.upTo100}</Text>
+                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.moreThan100 ? "x" : "  "} ]&nbsp;&nbsp;{InvestmentEnum.moreThan100}</Text>
+                <Text style={styles.answer}>[ {briefingData?.investment == InvestmentEnum.none ? "x" : "  "} ]&nbsp;&nbsp;{InvestmentEnum.none}</Text>
             </View>
 
             <FooterPdf />

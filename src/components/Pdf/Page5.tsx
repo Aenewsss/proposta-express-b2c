@@ -18,9 +18,9 @@ const PdfPage5 = ({ briefingData }: { briefingData: IBriefing }) => {
 
             <View >
                 <Text style={styles.question}>Qual o objetivo do site?</Text>
-                <Text style={styles.answer}>[ {typeof briefingData?.siteObjective != 'string' && briefingData?.siteObjective?.filter(el => el == SiteObjectiveEnum.inform).length > 0 ? "x" : ""} ]&nbsp;&nbsp;{SiteObjectiveEnum.inform}</Text>
-                <Text style={styles.answer}>[ {typeof briefingData?.siteObjective != 'string' && briefingData?.siteObjective?.filter(el => el == SiteObjectiveEnum.sell).length > 0 ? "x" : ""} ]&nbsp;&nbsp;{SiteObjectiveEnum.sell}</Text>
-                <Text style={styles.answer}>[ {typeof briefingData?.siteObjective != 'string' && briefingData?.siteObjective?.filter(el => el == SiteObjectiveEnum.support).length > 0 ? "x" : ""} ]&nbsp;&nbsp;{SiteObjectiveEnum.support}</Text>
+                <Text style={styles.answer}>[ {typeof briefingData?.siteObjective != 'string' && briefingData?.siteObjective?.filter(el => el == SiteObjectiveEnum.inform).length > 0 ? "x" : "  "} ]&nbsp;&nbsp;{SiteObjectiveEnum.inform}</Text>
+                <Text style={styles.answer}>[ {typeof briefingData?.siteObjective != 'string' && briefingData?.siteObjective?.filter(el => el == SiteObjectiveEnum.sell).length > 0 ? "x" : "  "} ]&nbsp;&nbsp;{SiteObjectiveEnum.sell}</Text>
+                <Text style={styles.answer}>[ {typeof briefingData?.siteObjective != 'string' && briefingData?.siteObjective?.filter(el => el == SiteObjectiveEnum.support).length > 0 ? "x" : "  "} ]&nbsp;&nbsp;{SiteObjectiveEnum.support}</Text>
             </View>
 
             <View style={styles.viewQuestionMoreMargin}>
@@ -30,20 +30,20 @@ const PdfPage5 = ({ briefingData }: { briefingData: IBriefing }) => {
 
             <View style={styles.viewQuestionMoreMargin}>
                 <Text style={styles.question}>Que tipo de site você precisa?</Text>
-                <Text style={styles.answer}>[ {typeof briefingData?.siteType != 'string' && briefingData?.siteType?.filter(el => el == TypeSiteEnum.institutional).length > 0 ? "x" : ""} ]&nbsp;&nbsp;{TypeSiteEnum.institutional}</Text>
-                <Text style={styles.answer}>[ {typeof briefingData?.siteType != 'string' && briefingData?.siteType?.filter(el => el == TypeSiteEnum.blog).length > 0 ? "x" : ""} ]&nbsp;&nbsp;{TypeSiteEnum.blog}</Text>
-                <Text style={styles.answer}>[ {typeof briefingData?.siteType != 'string' && briefingData?.siteType?.filter(el => el == TypeSiteEnum.landingPage).length > 0 ? "x" : ""} ]&nbsp;&nbsp;{TypeSiteEnum.landingPage}</Text>
-                <Text style={styles.answer}>[ {typeof briefingData?.siteType != 'string' && briefingData?.siteType?.filter(el => el == TypeSiteEnum.campaign).length > 0 ? "x" : ""} ]&nbsp;&nbsp;{TypeSiteEnum.campaign}</Text>
-                <Text style={styles.answer}>[ {typeof briefingData?.siteType != 'string' && briefingData?.siteType?.filter(el => el == TypeSiteEnum.political).length > 0 ? "x" : ""} ]&nbsp;&nbsp;{TypeSiteEnum.political}</Text>
+                <Text style={styles.answer}>[ {typeof briefingData?.siteType != 'string' && briefingData?.siteType?.filter(el => el == TypeSiteEnum.institutional).length > 0 ? "x" : "  "} ]&nbsp;&nbsp;{TypeSiteEnum.institutional}</Text>
+                <Text style={styles.answer}>[ {typeof briefingData?.siteType != 'string' && briefingData?.siteType?.filter(el => el == TypeSiteEnum.blog).length > 0 ? "x" : "  "} ]&nbsp;&nbsp;{TypeSiteEnum.blog}</Text>
+                <Text style={styles.answer}>[ {typeof briefingData?.siteType != 'string' && briefingData?.siteType?.filter(el => el == TypeSiteEnum.landingPage).length > 0 ? "x" : "  "} ]&nbsp;&nbsp;{TypeSiteEnum.landingPage}</Text>
+                <Text style={styles.answer}>[ {typeof briefingData?.siteType != 'string' && briefingData?.siteType?.filter(el => el == TypeSiteEnum.campaign).length > 0 ? "x" : "  "} ]&nbsp;&nbsp;{TypeSiteEnum.campaign}</Text>
+                <Text style={styles.answer}>[ {typeof briefingData?.siteType != 'string' && briefingData?.siteType?.filter(el => el == TypeSiteEnum.political).length > 0 ? "x" : "  "} ]&nbsp;&nbsp;{TypeSiteEnum.political}</Text>
             </View>
 
             <View style={styles.viewQuestionMoreMargin}>
                 <Text style={styles.question}>Qual a aparência da identidade visual (design) esperada?</Text>
-                <Text style={styles.answer}>[ {typeof briefingData?.expectedAppearance != 'string' && briefingData?.expectedAppearance?.filter(el => el == ExpectedAppearanceEnum.artistic).length > 0 ? "x" : ""} ]&nbsp;&nbsp;{ExpectedAppearanceEnum.artistic}</Text>
-                <Text style={styles.answer}>[ {typeof briefingData?.expectedAppearance != 'string' && briefingData?.expectedAppearance?.filter(el => el == ExpectedAppearanceEnum.clean).length > 0 ? "x" : ""} ]&nbsp;&nbsp;{ExpectedAppearanceEnum.clean}</Text>
-                <Text style={styles.answer}>[ {typeof briefingData?.expectedAppearance != 'string' && briefingData?.expectedAppearance?.filter(el => el == ExpectedAppearanceEnum.modern).length > 0 ? "x" : ""} ]&nbsp;&nbsp;{ExpectedAppearanceEnum.modern}</Text>
-                <Text style={styles.answer}>[ {typeof briefingData?.expectedAppearance != 'string' && briefingData?.expectedAppearance?.filter(el => el == ExpectedAppearanceEnum.tech).length > 0 ? "x" : ""} ]&nbsp;&nbsp;{ExpectedAppearanceEnum.tech}</Text>
-                <Text style={styles.answer}>[ {typeof briefingData?.expectedAppearance != 'string' && briefingData?.expectedAppearance?.filter(el => el == ExpectedAppearanceEnum.traditional).length > 0 ? "x" : ""} ]&nbsp;&nbsp;{ExpectedAppearanceEnum.traditional}</Text>
+                <Text style={styles.answer}>[ {typeof briefingData?.expectedAppearance != 'string' && briefingData?.expectedAppearance?.filter(el => el == ExpectedAppearanceEnum.artistic).length > 0 ? "x" : "  "} ]&nbsp;&nbsp;{ExpectedAppearanceEnum.artistic}</Text>
+                <Text style={styles.answer}>[ {typeof briefingData?.expectedAppearance != 'string' && briefingData?.expectedAppearance?.filter(el => el == ExpectedAppearanceEnum.clean).length > 0 ? "x" : "  "} ]&nbsp;&nbsp;{ExpectedAppearanceEnum.clean}</Text>
+                <Text style={styles.answer}>[ {typeof briefingData?.expectedAppearance != 'string' && briefingData?.expectedAppearance?.filter(el => el == ExpectedAppearanceEnum.modern).length > 0 ? "x" : "  "} ]&nbsp;&nbsp;{ExpectedAppearanceEnum.modern}</Text>
+                <Text style={styles.answer}>[ {typeof briefingData?.expectedAppearance != 'string' && briefingData?.expectedAppearance?.filter(el => el == ExpectedAppearanceEnum.tech).length > 0 ? "x" : "  "} ]&nbsp;&nbsp;{ExpectedAppearanceEnum.tech}</Text>
+                <Text style={styles.answer}>[ {typeof briefingData?.expectedAppearance != 'string' && briefingData?.expectedAppearance?.filter(el => el == ExpectedAppearanceEnum.traditional).length > 0 ? "x" : "  "} ]&nbsp;&nbsp;{ExpectedAppearanceEnum.traditional}</Text>
             </View>
 
 
