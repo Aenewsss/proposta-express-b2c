@@ -23,7 +23,7 @@ const PdfPage8 = () => {
 
                     <View style={{ paddingHorizontal: 16, paddingVertical: 28, flexDirection: "column", alignItems:"center" }}>
                         <Text style={{ fontWeight: "semibold", fontSize: 22 }}>Obrigado.</Text>
-                        <Link src="www.aenamartinelli.com.br" style={{ color: "#fff", fontFamily: "Plex-Sans", fontSize: 16 }}>www.aenamartinelli.vercel.app</Link>
+                        <Link src="www.aenamartinelli.com.br" style={{ color: "#fff", fontFamily: "Plex-Sans", fontSize: 16 }}>www.aenamartinelli.com.br</Link>
                     </View>
                 </View>
 
