@@ -3,7 +3,7 @@ import NextButton from "./Buttons/NextButton";
 const BriefingExplanation = () => {
     return (
         <section className="mt-5 container ">
-            <div className="d-flex justify-content-evenly">
+            <div className="d-flex justify-content-evenly flex-md-row flex-column">
                 <div className="border-main border-w2 m-2 p-5 exp-card-1 bg-white">
                     <p className="fw-medium fs-26 text-center">
                         O briefing é um conjunto de

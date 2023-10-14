@@ -35,6 +35,8 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  overflow-y: overlay;
+  padding-bottom: 30px;
 }
 
 body {
@@ -56,6 +58,16 @@ img {
   bottom: unset !important;
   left: unset !important;
   right: unset !important;
+}
+
+::-webkit-scrollbar{
+  width: 4px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: var(--main-color);
 }
 
 .ff-arame {
@@ -196,18 +208,46 @@ img {
   bottom: 10px;
 }
 
-.radio-styled, .check-styled{
-  width:30px;
+.radio-styled,
+.check-styled {
+  width: 30px;
   height: 30px;
 }
 
-.form-check-input:checked{
+.form-check-input:checked {
   background-color: var(--main-color);
   border: none;
 }
 
-.form-check-input:focus{
+.form-check-input:focus {
   box-shadow: 0 0 0 0.25rem rgba(255, 0, 183, 0.4);
 }
 
-.w-100px{width: 100px;}
+.w-100px {
+  width: 100px;
+}
+
+@media screen and (max-width: 992px) {
+  .exp-card-1::after,
+  .exp-card-2::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: var(--main-color);
+    left: 10px;
+    bottom: -20px;
+    top: unset;
+    right: unset;
+  }
+
+  .exp-card-2::before {
+    content: unset;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .w-md-50{
+    width: 50% !important;
+  }
+}

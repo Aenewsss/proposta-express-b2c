@@ -12,19 +12,19 @@ const FirstBriefingForm = () => {
 
     return (
         <form className="p-2">
-            <div className="d-flex gap-5">
-                <div className="mb-4 d-flex flex-column gap-2 w-50">
+            <div className="d-flex column-gap-5 row-gap-2 flex-md-nowrap flex-wrap">
+                <div className="mb-4 d-flex flex-column gap-2 w-md-50 w-100">
                     <label className="fw-bold">Qual é o nome da sua empresa?</label>
                     <input value={customerName} onChange={e => dispatch(changeCustomerName(e.target.value))} placeholder="Ex: Martinelli Tech" type="text" className="form-control" />
                 </div>
-                <div className="mb-4 d-flex flex-column gap-2 w-50">
+                <div className="mb-4 d-flex flex-column gap-2 w-md-50 w-100">
                     <label className="fw-bold">Qual é o ramo de atuação?</label>
                     <input value={branchActivity} onChange={e => dispatch(changeBranchActivity(e.target.value))} placeholder="Ex: Hamburgueira, Psicologia" type="text" className="form-control" />
                 </div>
             </div>
             <div className="mb-4 d-flex flex-column gap-2 w-100">
                 <label className="fw-bold">Estão nesse mercado a quantos anos?</label>
-                <div className="d-flex gap-4">
+                <div className="d-flex column-gap-4 row-gap-2 flex-md-nowrap flex-wrap">
                     <div className="form-check form-check-inline d-flex gap-2 align-items-center">
                         <input onChange={e => dispatch(changeMarketTime(e.target.value))} className="form-check-input border-dark radio-styled" role="button" type="radio" id="inlineCheckbox1" value={MarketTimeEnum.upToOneYear} name="time" />
                         <label className="form-check-label fs-16 fw-medium" htmlFor="inlineCheckbox1">Até um ano</label>
@@ -53,7 +53,7 @@ const FirstBriefingForm = () => {
             </div>
             <div className="mb-4 d-flex flex-column gap-2 w-100">
                 <label className="fw-bold">O que diferencia seu negócio de seus concorrentes?</label>
-                <div className="d-flex gap-4">
+                <div className="d-flex column-gap-4 row-gap-2 flex-md-nowrap flex-wrap">
                     <div className="form-check form-check-inline  d-flex gap-2 align-items-center">
                         <input onChange={e => dispatch(changeDifferentials(e.target.value))} className="form-check-input border-dark radio-styled" role="button" type="checkbox" id="inlineCheckbox5" value={DifferentialsEnum.price} name="differential" />
                         <label className="form-check-label fs-16 fw-medium" htmlFor="inlineCheckbox5">Preço</label>
@@ -66,10 +66,10 @@ const FirstBriefingForm = () => {
                         <input onChange={e => dispatch(changeDifferentials(e.target.value))} className="form-check-input border-dark radio-styled" role="button" type="checkbox" id="inlineCheckbox7" value={DifferentialsEnum.services} name="differential" />
                         <label className="form-check-label fs-16 fw-medium" htmlFor="inlineCheckbox7">Serviços</label>
                     </div>
-                    <div className="form-check form-check-inline  d-flex gap-2 align-items-center">
+                    {/* <div className="form-check form-check-inline  d-flex gap-2 align-items-center">
                         <input onChange={e => dispatch(changeDifferentials(e.target.value))} className="form-check-input border-dark radio-styled" role="button" type="checkbox" id="inlineCheckbox8" value={DifferentialsEnum.other} name="differential" />
                         <label className="form-check-label fs-16 fw-medium" htmlFor="inlineCheckbox8">Outro</label>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </form>

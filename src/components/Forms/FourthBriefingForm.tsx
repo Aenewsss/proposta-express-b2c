@@ -22,7 +22,7 @@ const FourthBriefingForm = () => {
 
             <div className="mb-4 d-flex flex-column gap-2 w-100">
                 <label className="fw-bold">Qual o objetivo do site?</label>
-                <div className="d-flex column-gap-5 row-gap-2 flex-wrap">
+                <div className="d-flex column-gap-5 row-gap-2 flex-wrap flex-md-row flex-column">
                     <div className="form-check d-flex gap-2 align-items-center">
                         <input onChange={e => dispatch(changeSiteObjective(e.target.value))} className="form-check-input border-dark check-styled" role="button" type="checkbox" id="siteObjective1" value={SiteObjectiveEnum.inform} name="site-objective" />
                         <label className="form-check-label fs-16 fw-medium" htmlFor="siteObjective1">{SiteObjectiveEnum.inform}</label>
@@ -97,7 +97,7 @@ const FourthBriefingForm = () => {
 
             <div className="mb-4 d-flex flex-column gap-2 w-100">
                 <label className="fw-bold">Quais páginas ou seções você imagina para seu site?</label>
-                <div className="d-flex column-gap-5 row-gap-2 flex-wrap">
+                <div className="d-flex column-gap-5 row-gap-2 flex-wrap flex-md-row flex-column">
                     <div className="form-check d-flex gap-2 align-items-center">
                         <input onChange={e => dispatch(changeSiteSections(e.target.value))} className="form-check-input border-dark check-styled" role="button" type="checkbox" id="siteSections1" value={SiteSectionsEnum.initialPage} name="site-sections" />
                         <label className="form-check-label fs-16 fw-medium" htmlFor="siteSections1">{SiteSectionsEnum.initialPage}</label>

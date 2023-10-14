@@ -19,7 +19,7 @@ function BriefingFlowCard({ stage }: { stage: string }) {
     }
 
     return (
-        <div className="flow-card p-4">
+        <div className="flow-card p-4 d-md-block d-none">
             {getCirclesFlow()}
         </div>
     );
