@@ -8,10 +8,12 @@ import { useSelector } from "react-redux";
 export default function Pdf() {
 
     const { briefing } = useSelector((store: IStore) => store);
-    
-    return (
-        <PDFViewer className="w-100 vh-100">
-            <PdfDocument briefingData={briefing} />
-        </PDFViewer>
-    )
+
+    if (typeof window !== 'undefined') {
+        return (
+            <PDFViewer className="w-100 vh-100">
+                <PdfDocument briefingData={briefing} />
+            </PDFViewer>
+        )
+    } else return null
 }
